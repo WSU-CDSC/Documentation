@@ -12,7 +12,7 @@ This method has several advantages over capturing DV as analog video using a sta
 ![DV Lock](Resources/DV.png)
 
 # Camera Setup
-![DV Port](Resources/DV_Port.png)
+![DV Port](Resources/DV_Port.jpg)
 
 # Transferring with Premiere
 
