@@ -9,6 +9,11 @@
 ![DV Port](Resources/DV_Port.png)
 
 # Transferring with Premiere
+![New Project](Resources/NewProject.png)
+
+![Capture Menu](Resources/CaptureMenu.png)
+
+![Capture Screen](Resources/CaptureScreen.png)
 
 # Post Transfer Processing
 * Rewrap to raw DV if desired `ffmpeg -i INPUT.mov - f rawvideo -c:v copy OUTPUT.dv`
