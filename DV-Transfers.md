@@ -19,8 +19,10 @@ This method has several advantages over capturing DV as analog video using a sta
 # Transferring with Premiere
 
 # Post Transfer Processing
-* Rewrap to raw DV if desired `ffmpeg -i INPUT.mov - f rawvideo -c:v copy OUTPUT.dv`
 * [DV Analyzer](https://mediaarea.net/DVAnalyzer)
+- Files should be inspected using the `DV Analyzer` tool. This tool allows the embedded timecode metadata as well as error correction information to be inspected. Since DV is a tape based format, it is normal to have a certain amount of errors, but checking the file information with DV Analyzer will allow you to identify if there were any particularly problematic segments.
+
+* Rewrap to raw DV if desired `ffmpeg -i INPUT.mov - f rawvideo -c:v copy OUTPUT.dv`
 * Command for derivative: `ffmpeg -i INPUT.dv -c:v libx264 -pix_fmt yuv420p -movflags +faststart -preset slow -crf 18 -c:a aac -ar 48k -b:a 128k -vf yadif=deint=1 OUTPUT.mp4`
 
 Alternately, if the original transfer was broken up into segments and it is desirable to combine them into a single access file, the [concat function of FFmpeg](https://amiaopensource.github.io/ffmprovisr/#join_files) can be used:
