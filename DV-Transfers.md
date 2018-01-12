@@ -14,8 +14,14 @@ This method has several advantages over capturing DV as analog video using a sta
 ![DV Lock](Resources/DV.png)
 
 # Camera Setup
+
+To connect the player/camera to the comptuer you will use the 'DV Out' port (example picture below) on the camera and connect it via the Firewire to Thunderbolt adapter. This enables the computer to control the player and capture the contents of the tape as data rather than as analog video.
+
+
 ![DV Port](Resources/DV_Port.jpg)
 Link to Manual for [CDSC Camera](https://www.sony.co.uk/electronics/support/res/manuals/3061/30615081M.pdf)
+
+# Transferring with AVCVideoCap (Suggested method)
 
 # Transferring with Premiere
 ![New Project](Resources/NewProject.png)
@@ -36,3 +42,6 @@ The following commands will create a high quality `mp4` file that has been deint
 
 Alternately, if the original transfer was broken up into segments and it is desirable to combine them into a single access file, the [concat function of FFmpeg](https://amiaopensource.github.io/ffmprovisr/#join_files) can be used:
 `ffmpeg -f concat -safe 0 -i ListOfDVs.txt -c:v libx264 -pix_fmt yuv420p -movflags +faststart -preset slow -crf 18 -c:a aac -ar 48k -b:a 128k -vf yadif=deint=1 OUTPUT.mp4`
+
+# Resources
+* [Information](https://www.adamwilt.com/DV-tech.html) about DV specifications and various formats
