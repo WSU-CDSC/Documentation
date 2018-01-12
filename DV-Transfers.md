@@ -15,6 +15,7 @@ This method has several advantages over capturing DV as analog video using a sta
 
 # Camera Setup
 ![DV Port](Resources/DV_Port.jpg)
+Link to Manual for [CDSC Camera](https://www.sony.co.uk/electronics/support/res/manuals/3061/30615081M.pdf)
 
 # Transferring with Premiere
 ![New Project](Resources/NewProject.png)
