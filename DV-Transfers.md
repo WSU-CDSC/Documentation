@@ -26,7 +26,8 @@ Link to Manual for [CDSC Camera](https://www.sony.co.uk/electronics/support/res/
 
 # Transferring with Premiere (Non-preferred Method)
 
-Premier is capable of capturing data from DV tapes, but is not the preferred method due to its tendency to drop frames when it encounters a problem segment. If there are no problem segments, and Premier is able to capture a tape as a single file then that file may be considered preservation quality. It is, however, available within the Libraries using existing infrastructure so instructions are being included.
+Premier is capable of capturing data from DV tapes, but is not the preferred method due to its tendency to drop frames when it encounters a problem segment. If there are no problem segments, and Premier is able to capture a tape as a single file then that file may be considered preservation quality. It is, however, available within the Libraries using existing infrastructure so instructions for its use are being included.
+
 ![New Project](Resources/NewProject.png)
 
 ![Capture Menu](Resources/CaptureMenu.png)
