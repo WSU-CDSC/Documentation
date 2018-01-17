@@ -24,6 +24,14 @@ Link to Manual for [CDSC Camera](https://www.sony.co.uk/electronics/support/res/
 
 # Transferring with AVCVideoCap (Suggested method)
 
+AVCVideoCap can be downloaded through the [Apple Developer Tools](https://developer.apple.com/develop/) (an account must be registered first). It is a part of the FireWire SDK and can be downloaded by searching for `Firewire` and then installing the package.
+
+![AVCVideoCap1](Resources/avcvideocap1.png)
+
+![AVCVideoCap2](Resources/avcvideocap2.png)
+
+![AVCVideoCap3](Resources/avcvideocap3.png)
+
 # Transferring with Premiere (Non-preferred Method)
 
 Premier is capable of capturing data from DV tapes, but is not the preferred method due to its tendency to drop frames when it encounters a problem segment. If there are no problem segments, and Premier is able to capture a tape as a single file then that file may be considered preservation quality. It is, however, available within the Libraries using existing infrastructure so instructions for its use are being included.
