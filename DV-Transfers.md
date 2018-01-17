@@ -9,13 +9,15 @@ This method has several advantages over capturing DV as analog video using a sta
 * Add note about ExFat if using usb drive
 
 # Pre-transfer Inspection
-* Before inserting the tape into the player, do a visual inspection. Is the lock tab (pictured below) set to the `SAVE` position? If not, then move it to `SAVE`. Check to see if the tape pack looks normal. Once you have inserted the tape into the player, fast-forward it to the end and then rewind it once to make sure that the tape tension is ready for correct playback.
-
+* Before inserting the tape into the player, do a visual inspection. Is the lock tab (pictured below) set to the `SAVE` position? If not, then move it to `SAVE`. Check to see if the tape pack looks normal.
 ![DV Lock](Resources/DV.png)
 
 # Camera Setup
 
-To connect the player/camera to the computer you will use the 'DV Out' port (example picture below) on the camera and connect it via the FireWire to Thunderbolt adapter. This enables the computer to control the player and capture the contents of the tape as data rather than as analog video.
+To connect the player/camera to the computer you will use the 'DV Out' port (example picture below) on the camera and connect it via the FireWire to Thunderbolt adapter. This enables the computer to control the player and capture the contents of the tape as data rather than as analog video. If using the CDSC DV camera as your playback device, set the power switch to 'VCR' mode.
+
+Once you have inserted the tape into the player, fast-forward it to the end and then rewind it once to make sure that the tape tension is ready for correct playback. Tapes that have not been played for a long time are subject to certain amounts of temperature induced expansion and contraction which can create loose tape winds that are problematic on playback.
+
 
 
 ![DV Port](Resources/DV_Port.jpg)
@@ -24,11 +26,17 @@ Link to Manual for [CDSC Camera](https://www.sony.co.uk/electronics/support/res/
 
 # Transferring with AVCVideoCap (Suggested method)
 
-AVCVideoCap can be downloaded through the [Apple Developer Tools](https://developer.apple.com/develop/) (an account must be registered first). It is a part of the FireWire SDK and can be downloaded by searching for `Firewire` and then installing the package.
+AVCVideoCap can be downloaded through the [Apple Developer Tools](https://developer.apple.com/develop/) (an account must be registered first). It is a part of the FireWire SDK and can be downloaded by searching for `Firewire` and then installing the package. To be safe, you should change the computer sleep settings in `System Preferences` so that it will not go to sleep during the capture process.
+
+Upon opening AVCVideoCap you will see a screen like this - if the computer is registering the playback device correctly it should appear in the 'Device' list. If the playback machine doesn't appear, check your connections and make sure the player is set to the right mode and/or powered on. Once you are ready to start your transfer, press `Capture From Device`.
 
 ![AVCVideoCap1](Resources/avcvideocap1.png)
 
+When prompted, enter the name of the file for the DV transfer. Next you will be prompted to choose a recording mode. Select `Tape Control`. When `Continue` is pressed, the capture will begin and the computer will control the player automatically.
+
 ![AVCVideoCap2](Resources/avcvideocap2.png)
+
+As the capture progresses, the number in the `Frame/Packet Count` box will increase - this represents the data that you are capturing. You do not want the numbers in `Over-Runs` or `Dropped-Frames` to increase as this means that some of the data has been lost during the capture process. 
 
 ![AVCVideoCap3](Resources/avcvideocap3.png)
 
