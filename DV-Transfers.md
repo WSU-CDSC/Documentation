@@ -41,11 +41,17 @@ As the capture progresses, the number in the `Frame/Packet Count` box will incre
 
 Premier is capable of capturing data from DV tapes, but is not the preferred method due to its tendency to drop frames when it encounters a problem segment. If there are no problem segments, and Premier is able to capture a tape as a single file then that file may be considered preservation quality. It is, however, available within the Libraries using existing infrastructure so instructions for its use are being included.
 
+First create a new project within Premier. Make sure that the `Capture Settings` are set to DV.
+
 <img src="Resources/NewProject.png" alt="Premier New Project">
 
-![Capture Menu](Resources/CaptureMenu.png)
+The `Capture Window` can be opened via the File menu.
 
-![Capture Screen](Resources/CaptureScreen.png)
+<img src="Resources/CaptureMenu.png" alt="Premier Capture Menu">
+
+Once in the Capture Window, the camera can be controlled from within Premier. Once ready to capture, press the `Tape`button. This will create MOV wrapped files of the DV stream into the project directory. Once you are done capturing, right click on one of the clips in the project and choose 'Reveal in Finder.' This will show you where your files have actually been saved.
+
+<img src="Resources/CaptureScreen.png" alt="Premier Capture Screen">
 
 # Post Transfer Processing
 * [DV Analyzer](https://mediaarea.net/DVAnalyzer):
@@ -54,7 +60,7 @@ Files should be inspected using the `DV Analyzer` tool. This tool allows the emb
 * Re-wrap to raw DV if desired: Since Premier captures DV files in a MOV wrapper, it may be preferable to re-wrap them to a raw DV stream. This is slightly smaller, and a more true representation of the data contained on the taper. To do this, use the progam [FFmpeg](https://www.ffmpeg.org/) and the following command: `ffmpeg -i INPUT.mov - f rawvideo -c:v copy OUTPUT.dv`
 
 ## Make Derivatives
-The following commands will create a high quality `mp4` file that has been deinterlaced for optimum viewing quality on modern screens.
+The following FFmpeg commands will create a high quality `mp4` file that has been deinterlaced for optimum viewing quality on modern screens.
 * Command for derivative: `ffmpeg -i INPUT.dv -c:v libx264 -pix_fmt yuv420p -movflags +faststart -preset slow -crf 18 -c:a aac -ar 48k -b:a 128k -vf yadif=deint=1 OUTPUT.mp4`
 
 Alternately, if the original transfer was broken up into segments and it is desirable to combine them into a single access file, the concat function of FFmpeg [explanation here](https://amiaopensource.github.io/ffmprovisr/#join_files) can be used:
@@ -63,3 +69,4 @@ Alternately, if the original transfer was broken up into segments and it is desi
 # Resources
 * [Information](https://www.adamwilt.com/DV-tech.html) about DV specifications and various formats
 * [DV Analyzer](https://mediaarea.net/DVAnalyzer/what-does-it-analyze) list of information about the metadata that DV Analyzer reads.
+* [ffmprovisr](https://amiaopensource.github.io/ffmprovisr/) resource with annotated example FFmpeg commands.
