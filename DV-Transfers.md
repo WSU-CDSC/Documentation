@@ -4,9 +4,9 @@ While DV is contained on tapes in the same manner as analog media, since DV is a
 
 This method has several advantages over capturing DV as analog video using a standard A/D converter. Not only will the captured DV stream conform to the data that was stored on the tape, which bolsters archival provenance, the amount of metadata contained within this stream can aid both quality control and cataloging. Using tools such as [MediaInfo](https://mediaarea.net/en/MediaInfo), [MediaInfo Online](https://mediaarea.net/MediaInfoOnline) and [DV Analyzer](https://mediaarea.net/DVAnalyzer) allows analysis of information such as recording time stamps, embedded timecode and playback error concealment. A sample DV Analyzer output is included below:
 
-
 ![DV Analyzer Output](Resources/DV_Analyzer_Out.png)
-* Add note about ExFat if using usb drive
+
+__NOTE__ DV files can be pretty big (around 10GB per hour). If you are planning on moving the files between the Mac stations and a Windows computer via an external drive, you must make sure that it is formatted correctly! Some disk formats limit maximum file sizes, which can get you into trouble with DV. It is recommended that any external drives used in this project be formatted in the [ExFAT](https://en.wikipedia.org/wiki/ExFAT) format.
 
 # Pre-transfer Inspection
 * Before inserting the tape into the player, do a visual inspection. Is the lock tab (pictured below) set to the `SAVE` position? If not, then move it to `SAVE`. Check to see if the tape pack looks normal.
@@ -57,7 +57,7 @@ Files should be inspected using the `DV Analyzer` tool. This tool allows the emb
 The following commands will create a high quality `mp4` file that has been deinterlaced for optimum viewing quality on modern screens.
 * Command for derivative: `ffmpeg -i INPUT.dv -c:v libx264 -pix_fmt yuv420p -movflags +faststart -preset slow -crf 18 -c:a aac -ar 48k -b:a 128k -vf yadif=deint=1 OUTPUT.mp4`
 
-Alternately, if the original transfer was broken up into segments and it is desirable to combine them into a single access file, the [concat function of FFmpeg](https://amiaopensource.github.io/ffmprovisr/#join_files) can be used:
+Alternately, if the original transfer was broken up into segments and it is desirable to combine them into a single access file, the concat function of FFmpeg [explanation here](https://amiaopensource.github.io/ffmprovisr/#join_files) can be used:
 `ffmpeg -f concat -safe 0 -i ListOfDVs.txt -c:v libx264 -pix_fmt yuv420p -movflags +faststart -preset slow -crf 18 -c:a aac -ar 48k -b:a 128k -vf yadif=deint=1 OUTPUT.mp4`
 
 # Resources
