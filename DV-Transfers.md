@@ -49,7 +49,7 @@ The `Capture Window` can be opened via the File menu.
 
 <img src="Resources/CaptureMenu.png" alt="Premier Capture Menu">
 
-Once in the Capture Window, the camera can be controlled from within Premier. Once ready to capture, press the `Tape`button. This will create MOV wrapped files of the DV stream into the project directory. Once you are done capturing, right click on one of the clips in the project and choose 'Reveal in Finder.' This will show you where your files have actually been saved.
+Once in the Capture Window, the camera can be controlled from within Premier. Once ready to capture, press the `Tape`button. This will create MOV wrapped files of the DV stream into the project directory. Once you are done capturing, close the transfer window and right click on one of the clips in the project window. Choose 'Reveal in Finder.' This will show you where your files have actually been saved.
 
 <img src="Resources/CaptureScreen.png" alt="Premier Capture Screen">
 
