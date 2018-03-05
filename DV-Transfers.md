@@ -57,7 +57,7 @@ Once in the Capture Window, the camera can be controlled from within Premier. On
 * [DV Analyzer](https://mediaarea.net/DVAnalyzer):
 Files should be inspected using the `DV Analyzer` tool. This tool allows the embedded timecode metadata as well as error correction information to be inspected. Since DV is a tape based format, it is normal to have a certain amount of errors, but checking the file information with DV Analyzer will allow you to identify if there were any particularly problematic segments.
 
-* Re-wrap to raw DV if desired: Since Premier captures DV files in a MOV wrapper, it may be preferable to re-wrap them to a raw DV stream. This is slightly smaller, and a more true representation of the data contained on the taper. To do this, use the progam [FFmpeg](https://www.ffmpeg.org/) and the following command: `ffmpeg -i INPUT.mov - f rawvideo -c:v copy OUTPUT.dv`
+* Re-wrap to raw DV if desired: Since Premier captures DV files in a MOV wrapper, it may be preferable to re-wrap them to a raw DV stream. This is slightly smaller, and a more true representation of the data contained on the tape. To do this, use the progam [FFmpeg](https://www.ffmpeg.org/) and the following command: `ffmpeg -i INPUT.mov - f rawvideo -c:v copy OUTPUT.dv`
 
 ## Make Derivatives
 The following FFmpeg commands will create a high quality `mp4` file that has been deinterlaced for optimum viewing quality on modern screens.
