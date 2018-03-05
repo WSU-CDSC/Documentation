@@ -23,7 +23,18 @@ Once you have inserted the tape into the player, fast-forward it to the end and 
 
 # Transferring with AVCVideoCap (Suggested method)
 
-AVCVideoCap can be downloaded through the [Apple Developer Tools](https://developer.apple.com/develop/) (an account must be registered first). It is a part of the FireWire SDK and can be downloaded by searching for `Firewire` and then installing the package. To be safe, you should change the computer sleep settings in `System Preferences` so that it will not go to sleep during the capture process.
+AVCVideoCap can be downloaded through the [Apple Developer Tools](https://developer.apple.com/develop/) (an account must be registered first). It is a part of the FireWire SDK and can be found and downloaded with the following steps.
+* Once signed in to the Apple Developer Tools page, click on the `Downloads` tab at the top of the screen.
+
+![Downloads](Resources/downloads.png)
+
+* Next scroll to the bottom of the page and click on the `See More Downloads` link.
+
+![Downloads](Resources/moredownloads.png)
+
+* Lastly, search the `More Downloads` window for `Firewire` and download/install `Firewire SDK 26 for Mac OS X`.
+
+After the installer runs you will be able to access AVCVideoCap on your computer. To be safe, before using, you should change the computer sleep settings in `System Preferences` so that it will not go to sleep during the capture process.
 
 Upon opening AVCVideoCap you will see a screen like this - if the computer is registering the playback device correctly it should appear in the 'Device' list. If the playback machine doesn't appear, check your connections and make sure the player is set to the right mode and/or powered on. Once you are ready to start your transfer, press `Capture From Device`.
 
