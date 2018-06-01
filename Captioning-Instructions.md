@@ -14,7 +14,7 @@ The SHN Transcription Sreadsheet is color coded to the represent status of each 
 
 #### Step 2: Find file in [SHN Vimeo](https://vimeo.com/sustainableheritage)
 
-The file name of the `.vtt` transcript file will contain the title for the corresponding video in the [SHN Vimeo page]((https://vimeo.com/sustainableheritage). It will be necessary to have this video open in your browser in order to compare the computer generated transcription against the original audio while you edit the computer generated transcript.
+The file name of the `.vtt` transcript file will contain the title for the corresponding video in the [SHN Vimeo page](https://vimeo.com/sustainableheritage). It will be necessary to have this video open in your browser in order to compare the computer generated transcription against the original audio while you edit the computer generated transcript.
 
 #### Step 3: Open file in text editor
 
