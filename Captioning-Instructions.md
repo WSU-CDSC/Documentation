@@ -8,7 +8,7 @@ These instructions are for the caption creation process for the SHN Vimeo collec
 
 #### Step 1: Open spreadsheet
 
-The SHN Transcription Sreadsheet is color coded to the represent status of each video regarding transcripts. Pick one of the files that is marked as `Transcript Generated` (Yellow) and find this file in the `Unedited Transcripts` folder.
+The SHN Transcription Spreadsheet is color coded to the represent status of each video regarding transcripts. Pick one of the files that is marked as `Transcript Generated` (Yellow) and find this file in the `Unedited Transcripts` folder.
 
 ![Spreadsheet example](/Resources/transcript1.png)
 
@@ -18,6 +18,10 @@ The file name of the `.vtt` transcript file will contain the title for the corre
 
 #### Step 3: Open file in text editor
 
-Open the `.vtt` transcript file in a text editor. 
+Since the `.vtt` files are just text documents, you can edit them in a standard text editor. Open the transcript in an editor and look at it for any obvious mistakes. As necessary, compare the transcription against the actual video file in Vimeo. Use the timestamps in the transcript to find the relative segments of speech in the video.
+
 #### Step 4: Save file and move to 'Edited Transcripts' folder
+
+Once you are finished editing the transcript, save it as you would a normal text file. Then move it into the `Edited Transcripts` folder.
 #### Step 5: Update spreadsheet
+In the SHN Transcription Spreadsheet, change the fill color for the transcript you completed to blue to signify that the transcript has been edited and is ready for upload to Vimeo.
