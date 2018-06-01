@@ -24,4 +24,23 @@ Since the `.vtt` files are just text documents, you can edit them in a standard 
 
 Once you are finished editing the transcript, save it as you would a normal text file. Then move it into the `Edited Transcripts` folder.
 #### Step 5: Update spreadsheet
+
 In the SHN Transcription Spreadsheet, change the fill color for the transcript you completed to blue to signify that the transcript has been edited and is ready for upload to Vimeo.
+
+### Considerations/Things to watch out for
+
+* Many of the SHN Videos contain elements of people speaking in languages besides English. The auto-transcription software will attempt to create an English transcript based off of these sounds, resulting in nonsensical portions of text. If you see any portions of a transcript that make no sense in context, it is very possible that the speaker is using a non-English language. Using parenthesis, replace the text with a note to that effect, and when possible attempt to identify and include what language the is being spoken. An example would be `(Speaker talking in Japanese)`.
+
+* The auto-transcription software will often confuse homophones (words with the same pronunciation but different spellings/meanings) such as `our` and `are`. When reading the transcript, pay particular attention to context to catch these mistakes.
+
+* Often you can use context to correct mistakes without needing to verify against the original audio. An example is the following where the word `war` is a mistake for the word `work`:
+
+> 00:00:35.13 --> 00:00:39.27
+
+> not my work but the collective war of
+>
+> 00:00:39.27 --> 00:00:42.15
+
+> librarians in the state of New Mexico
+
+* If a sentence or line would be made more clear by adding punctuation (such as a comma) feel free to add punctuation.
