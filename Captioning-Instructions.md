@@ -18,7 +18,7 @@ The file name of the `.vtt` transcript file will contain the title for the corre
 
 #### Step 3: Open file in text editor
 
-Since the `.vtt` files are just text documents, you can edit them in a standard text editor. Open the transcript in an editor and look at it for any obvious mistakes. As necessary, compare the transcription against the actual video file in Vimeo. Use the timestamps in the transcript to find the relative segments of speech in the video.
+Since the `.vtt` files are just text documents, you can edit them in a standard text editor. Open the transcript in an editor and look at it for any obvious mistakes. As necessary, compare the transcription against the actual video file in Vimeo. Use the timestamps in the transcript to find the relative segments of speech in the video. The goal is to correct mistakes made by the transcription software so that the transcription as closely resembles the actual audio as possible.
 
 #### Step 4: Save file and move to 'Edited Transcripts' folder
 
