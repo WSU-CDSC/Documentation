@@ -11,19 +11,20 @@
 * [Backblaze B2 Information](#b2-information)
 
 ## Overview:
-The current workflow for migrating/storing digital materials into offsite cloud storage utilizes Ruby Scripts to prepare and upload data to the [Backblaze B2 Storage service](https://www.backblaze.com/b2/cloud-storage.html).
+The current workflow for migrating/storing digital materials into offsite cloud storage utilizes Ruby Scripts to prepare and upload data to the [Backblaze B2 Storage service](https://www.backblaze.com/b2/cloud-storage.html). As of writing, scripts have been tested in a Linux environment. Individual descriptions for the scripts can be found at the following links:
 
 * [makeaip.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/makeaip.md)
 * [aip2b2.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/aip2b2.md)
 
 ## Workflow Dependencies
-* [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-* [Bagit Java](https://github.com/LibraryOfCongress/bagit-java)
-* [B2 Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html)
 
+The scripts used in the workflow control several tools that must be present/installed to function.
+* [Ruby](https://www.ruby-lang.org/en/documentation/installation/): As the scripts are written in Ruby, the computer must have Ruby installed.
+* [Bagit Java](https://github.com/WSU-CDSC/bagit-java): Currently the scripts use the Java command line tool, which in current form must be installed to path. Bagit Java has been forked to the CDSC Github account.
+* [B2 Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html): This is the tool released by Backblaze to faciltate interactions with their cloud service.
 
+## Workflow Steps:
 
-## Steps:
 ### Generate AIP
 * Use `makeaip.rb` to copy and restructure target directories onto a staging drive.
   - Optionally use the `-a` flag to automatically separate file extensions deemed access files.
@@ -37,6 +38,9 @@ The current workflow for migrating/storing digital materials into offsite cloud 
 * Update 'Locations' document to reflect backup status of AIP to cloud and any drives.
 
 ## Download Workflow
+For basic access to files stored in B2, the web interface provides convenient browsing/download capabilitites. For most patron requests, simply navigating to the file(s) or AIP in the browser and downloading should be sufficient. If a full AIP level package is downloaded, its integrity can be validated using one of the previously mentioned Bagit tools. If the Java CLI is used, the command is `bagit verifyvalid [INPUT BAG]` for a full checksum validation or `bagit checkpayloadoxum [INPUT BAG]` for a quick validation by payload size.
+
+When uploaded via `aip2b2.rb`, the b2 `sync` command is used which stores file metadata such as modification time is stored along side files. In the event of a download 
 
 ## B2 Information
 
