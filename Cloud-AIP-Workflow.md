@@ -4,6 +4,11 @@
 # Contents
 * [Overview](#overview)
 * [Workflow Dependencies](#workflow-dependencies)
+* [Workflow Steps](#workflow-steps)
+  - [Generate AIP](#generate-aip)
+  - [Upload AIP](#upload-aip)
+* [Download Workflow](download-workflow)
+* [Backblaze B2 Information](#b2-information)
 
 ## Overview:
 The current workflow for migrating/storing digital materials into offsite cloud storage utilizes Ruby Scripts to prepare and upload data to the [Backblaze B2 Storage service](https://www.backblaze.com/b2/cloud-storage.html).
@@ -30,6 +35,10 @@ The current workflow for migrating/storing digital materials into offsite cloud 
 * Use the `aip2b2.rb` script to upload the AIP to Backblaze B2.
 * Check logs/Backblaze interface to verify successful upload.
 * Update 'Locations' document to reflect backup status of AIP to cloud and any drives.
+
+## Download Workflow
+
+## B2 Information
 
 
 
