@@ -1,13 +1,17 @@
 
 # Cloud Storage Workflow for Archival Packages
 
+# Contents
+* [Overview](#overview)
+* [Workflow Dependencies](#workflow-dependencies)
+
 ## Overview:
 The current workflow for migrating/storing digital materials into offsite cloud storage utilizes Ruby Scripts to prepare and upload data to the [Backblaze B2 Storage service](https://www.backblaze.com/b2/cloud-storage.html).
 
 * [makeaip.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/makeaip.md)
 * [aip2b2.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/aip2b2.md)
 
-## Dependencies of workflow
+## Workflow Dependencies
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 * [Bagit Java](https://github.com/LibraryOfCongress/bagit-java)
 * [B2 Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html)
