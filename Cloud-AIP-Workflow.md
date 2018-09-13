@@ -52,6 +52,14 @@ __Note: ALL Packages downloaded for archival needs should have AIP Bag integrity
 More information about the `sync` command is available from Backblaze in [this how to article](https://help.backblaze.com/hc/en-us/articles/226937867-How-do-I-use-the-b2-sync-command-)
 
 ## B2 Information
+__Pricing (As of writing):__
+* Storage: $0.005 per GB per month
+* Download: $0.01 per GB
+* For downloads up to 3.5 TB, a phsycial drive can be used with Backblaze offering a service to refund cost of drive upon return.
+
+__File Integrity:__ SHA-1 Checksums generated and verified on upload using `sync` command.
+
+__Data Location:__ [Sacramento Area](https://help.backblaze.com/hc/en-us/articles/217667468-B2-Security-and-Redundancy).
 
 
 
