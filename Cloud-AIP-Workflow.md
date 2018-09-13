@@ -38,9 +38,18 @@ The scripts used in the workflow control several tools that must be present/inst
 * Update 'Locations' document to reflect backup status of AIP to cloud and any drives.
 
 ## Download Workflow
+
+### Basic Access Needs
 For basic access to files stored in B2, the web interface provides convenient browsing/download capabilitites. For most patron requests, simply navigating to the file(s) or AIP in the browser and downloading should be sufficient. If a full AIP level package is downloaded, its integrity can be validated using one of the previously mentioned Bagit tools. If the Java CLI is used, the command is `bagit verifyvalid [INPUT BAG]` for a full checksum validation or `bagit checkpayloadoxum [INPUT BAG]` for a quick validation by payload size.
 
-When uploaded via `aip2b2.rb`, the b2 `sync` command is used which stores file metadata such as modification time is stored along side files. In the event of a download 
+### Archival Access Needs
+When uploaded via `aip2b2.rb`, the b2 `sync` command is used which stores file metadata such as modification time is stored along side files. In the event of a download for Archival purposes (such as migration of data out of B2), it is important to use the reverse of this process to maintain this metadata. This can be done again using the `sync` command in reverse. It is suggested to do a 'dry run' download first to make sure you are using desired paths etc. An example command is:
+
+`b2 sync --dryRun 'b2://BUCKET-NAME/PATH-TO-TARGET' '/home/myuser/Desktop/TEST'`. To execute the download simply remove the `--dryRun` flag.
+
+__Note: ALL Packages downloaded for archival needs should have AIP Bag integrity validated__
+
+More information about the `sync` command is available from Backblaze in [this how to article](https://help.backblaze.com/hc/en-us/articles/226937867-How-do-I-use-the-b2-sync-command-)
 
 ## B2 Information
 
