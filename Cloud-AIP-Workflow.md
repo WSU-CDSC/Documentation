@@ -7,7 +7,7 @@
 * [Workflow Steps](#workflow-steps)
   - [Generate AIP](#generate-aip)
   - [Upload AIP](#upload-aip)
-* [Download Workflow](download-workflow)
+* [Download Workflow](#download-workflow)
 * [Backblaze B2 Information](#b2-information)
 
 ## Overview:
