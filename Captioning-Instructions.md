@@ -4,7 +4,7 @@
 
 These instructions are for the caption creation process for the SHN Vimeo collection. In order to generate subtitles, each video will be initially processed with speech to text software. This output will then be assembled into `.vtt` subtitle files with all content divided into four second segments. While this software does a good job of creating a rough transcript,it is far from perfect, and all `.vtt` files must be proofread and corrected for accuracy. The following are the instructions for this proofreading process.
 
-__Note__: Scripts and documentation for initial `.vtt` generation can be found in the WSU [microservices repository](https://github.com/WSU-CDSC/microservices/blob/master/Resources/transcription-scripts.md)
+__Note__: Scripts and documentation for initial `.vtt` generation can be found in the WSU [microservices repository](https://github.com/WSU-CDSC/microservices/blob/master/Resources/transcription-scripts.md).
 
 ### Workflow
 
