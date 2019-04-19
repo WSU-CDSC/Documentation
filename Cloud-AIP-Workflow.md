@@ -18,6 +18,9 @@ The current workflow for migrating/storing digital materials into off-site cloud
 * [makeaip.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/makeaip.md)
 * [aip2b2.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/aip2b2.md)
 
+## Updates to add for reworking:
+[PREMIS Event Type Dictionary](http://id.loc.gov/vocabulary/preservation/eventType.html)
+
 ## Workflow Dependencies
 
 The scripts used in the workflow control several tools that must be present/installed to function.
