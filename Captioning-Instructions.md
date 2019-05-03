@@ -24,7 +24,7 @@ Since the `.vtt` files are just text documents, you can edit them in a standard 
 
 #### Step 4: Save file and move to 'Edited Transcripts' folder
 
-Once you are finished editing the transcript, save it as you would a normal text file. Then move it into the `Edited Transcripts` folder.
+Once you are finished editing the transcript, save it as you would a normal text file.  Make sure that your editor is using UTF-8 character encoding to save the file! Then move it into the `Edited Transcripts` folder.
 #### Step 5: Update spreadsheet
 
 In the SHN Transcription Spreadsheet, change the fill color for the transcript you completed to blue to signify that the transcript has been edited and is ready for upload to Vimeo.
