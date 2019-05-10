@@ -61,7 +61,7 @@ When uploaded via `aip2b2.rb`, the b2 `sync` command is used which stores file m
 
 `b2 sync --dryRun 'b2://BUCKET-NAME/PATH-TO-TARGET' '/home/myuser/Desktop/TEST'`. To execute the download simply remove the `--dryRun` flag.
 
-__Note: ALL Packages downloaded for archival needs should have AIP Bag integrity validated__
+__Note: ALL Packages downloaded for archival needs should have AIP fixity integrity validated__
 
 More information about the `sync` command is available from Backblaze in [this how to article](https://help.backblaze.com/hc/en-us/articles/226937867-How-do-I-use-the-b2-sync-command-)
 
