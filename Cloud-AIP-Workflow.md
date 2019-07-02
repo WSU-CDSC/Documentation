@@ -4,7 +4,7 @@
 # Contents
 * [Overview](#overview)
 * [Workflow Dependencies](#workflow-dependencies)
-* [Workflow Steps](#workflow-steps)
+* [Workflow Steps and Scripts](#workflow-steps-and-scripts)
   - [Generate AIP](#generate-aip)
   - [Upload AIP](#upload-aip)
 * [Download Workflow](#download-workflow)
@@ -18,26 +18,20 @@ The current workflow for migrating/storing digital materials into off-site cloud
 * [makeaip.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/makeaip.md)
 * [aip2b2.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/aip2b2.md)
 
-## Updates to add for reworking:
-[PREMIS Event Type Dictionary](http://id.loc.gov/vocabulary/preservation/eventType.html)
-
 ## Workflow Dependencies
 
 The scripts used in the workflow control several tools that must be present/installed to function.
-* [Ruby](https://www.ruby-lang.org/en/documentation/installation/): As the scripts are written in Ruby, the computer must have Ruby installed.
+* [Ruby](https://www.ruby-lang.org/en/documentation/installation/): As the scripts are written in Ruby, the computer must have Ruby installed. Additionally, the scripts rely on the installation of the `mail` gem for mail capability. This can be installed (if ruby is present) with `sudo gem install mail`.
 * [Bagit Java](https://github.com/WSU-CDSC/bagit-java): Currently the scripts use the Java command line tool, which in current form must be installed to path. Bagit Java has been forked to the CDSC Github account.
 * [B2 Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html): This is the tool released by Backblaze to facilitate interactions with their cloud service.
-
-## Workflow Steps and Scripts:
-
-These are the scripts that are used to generate/maintain/validate metadata across WSU Libraries' (on site) Digital Storage. This metadata consists of sidecar files containing preservation, file integrity (fixity) and technical metadata. This metadata consists of a checksum/file manifest created by [Hashdeep](http://md5deep.sourceforge.net/start-hashdeep.html), an [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/) output in JSON, and a [MediaInfo](https://mediaarea.net/en/MediaInfo) output in JSON when A/V files are detected. Additionally, preservation actions such as metadata generation/verification and cloud migration are logged in a JSON file and mapped to [PREMIS vocabulary](http://id.loc.gov/vocabulary/preservation/eventType.html).
-
-## Setup:
-All scripts are written in ruby, so ruby must be present. Additionally, the scripts rely on the installation of the `mail` gem for mail capability. This can be installed with `sudo gem install mail`.
 
 The scripts rely on a central file containing methods etc, and will look for this script in their same directory, so make sure that the `wsu-functions.rb` file is always present along side of the scripts.
 
 There is a conig file (`wsu-microservices.config`) that also must be present in the script directory. This file can be opened using a text editor, and is used to set options such as email reporting and logfile location.
+
+## Workflow Steps and Scripts:
+
+These are the scripts that are used to generate/maintain/validate metadata across WSU Libraries' (on site) Digital Storage. This metadata consists of sidecar files containing preservation, file integrity (fixity) and technical metadata. This metadata consists of a checksum/file manifest created by [Hashdeep](http://md5deep.sourceforge.net/start-hashdeep.html), an [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/) output in JSON, and a [MediaInfo](https://mediaarea.net/en/MediaInfo) output in JSON when A/V files are detected. Additionally, preservation actions such as metadata generation/verification and cloud migration are logged in a JSON file and mapped to [PREMIS vocabulary](http://id.loc.gov/vocabulary/preservation/eventType.html).
 
 ## Core scripts:
 * [makemeta.rb](./makemeta.md)
