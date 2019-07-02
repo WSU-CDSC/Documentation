@@ -28,19 +28,27 @@ The scripts used in the workflow control several tools that must be present/inst
 * [Bagit Java](https://github.com/WSU-CDSC/bagit-java): Currently the scripts use the Java command line tool, which in current form must be installed to path. Bagit Java has been forked to the CDSC Github account.
 * [B2 Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html): This is the tool released by Backblaze to facilitate interactions with their cloud service.
 
-## Workflow Steps:
+## Workflow Steps and Scripts:
 
-### Generate AIP
-* Use `makeaip.rb` to copy and restructure target directories onto a staging drive.
-  - Optionally use the `-a` flag to automatically separate file extensions deemed access files.
-  - Optionally use the `-x` flag to __not__ create a 'bag' from transferred files. Use this when any manual processing will be done to the AIP prior to upload.
-* Review log(s) to make sure there were no unexpected failures during AIP creation.
-* If the `-x` flag was used, perform all manual processing and then finalize the AIP by structuring it as a bag. This can be done using one of the available tools such as [Bagger](https://github.com/LibraryOfCongress/bagger) or via the [Bagit Java tool](https://github.com/LibraryOfCongress/bagit-java). If using the java tool, the command is `bagit baginplace [TARGET]`
+These are the scripts that are used to generate/maintain/validate metadata across WSU Libraries' (on site) Digital Storage. This metadata consists of sidecar files containing preservation, file integrity (fixity) and technical metadata. This metadata consists of a checksum/file manifest created by [Hashdeep](http://md5deep.sourceforge.net/start-hashdeep.html), an [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/) output in JSON, and a [MediaInfo](https://mediaarea.net/en/MediaInfo) output in JSON when A/V files are detected. Additionally, preservation actions such as metadata generation/verification and cloud migration are logged in a JSON file and mapped to [PREMIS vocabulary](http://id.loc.gov/vocabulary/preservation/eventType.html).
 
-### Upload AIP
-* Use the `aip2b2.rb` script to upload the AIP to Backblaze B2.
-* Check logs/Backblaze interface to verify successful upload.
-* Update 'Locations' document to reflect backup status of AIP to cloud and any drives.
+## Setup:
+All scripts are written in ruby, so ruby must be present. Additionally, the scripts rely on the installation of the `mail` gem for mail capability. This can be installed with `sudo gem install mail`.
+
+The scripts rely on a central file containing methods etc, and will look for this script in their same directory, so make sure that the `wsu-functions.rb` file is always present along side of the scripts.
+
+There is a conig file (`wsu-microservices.config`) that also must be present in the script directory. This file can be opened using a text editor, and is used to set options such as email reporting and logfile location.
+
+## Core scripts:
+* [makemeta.rb](./makemeta.md)
+* [uploadaip.rb](./uploadaip.md)
+* [checkmeta.rb](./checkmeta.md)
+
+Script based workflow is:
+* Generate Metadata for collections using `makemeta.rb`
+* Upload collections to Backblaze B2 Storage using `uploadaip.rb`
+* Perform ongoing monitoring of metadata via `checkmeta.rb`
+* After any manual intervention necessitated by results of `checkmeta.rb` update metadata/modification time logs with `makemeta.rb` and (as necessary) resync to cloud with `uploadaip.rb`.
 
 ## Download Workflow
 
