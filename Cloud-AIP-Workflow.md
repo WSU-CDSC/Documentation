@@ -3,9 +3,9 @@
 
 # Contents
 * [Overview](#overview)
+  - [Core Scripts](#core-scripts)
 * [Workflow Dependencies](#workflow-dependencies)
 * [Workflow Steps and Scripts](#workflow-steps-and-scripts)
-  - [Core Scripts](#core-scripts)
   - [Usage Workflow](#usage-workflow)
 * [Download Workflow](#download-workflow)
   - [Using Cyberduck](#using-cyberduck)
@@ -15,8 +15,10 @@
 ## Overview:
 The current workflow for migrating/storing digital materials into off-site cloud storage utilizes Ruby Scripts to prepare and upload data to the [Backblaze B2 Storage service](https://www.backblaze.com/b2/cloud-storage.html). As of writing, scripts have been tested in a Linux environment. Individual descriptions for the scripts can be found at the following links:
 
-* [makeaip.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/makeaip.md)
-* [aip2b2.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/aip2b2.md)
+### Core scripts:
+* [makemeta.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/makemeta.md)
+* [uploadaip.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/uploadaip.md)
+* [checkmeta.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/checkmeta.md)
 
 ## Workflow Dependencies
 
@@ -32,11 +34,6 @@ There is a conig file (`wsu-microservices.config`) that also must be present in 
 ## Workflow Steps and Scripts:
 
 These are the scripts that are used to generate/maintain/validate metadata across WSU Libraries' (on site) Digital Storage. This metadata consists of sidecar files containing preservation, file integrity (fixity) and technical metadata. This metadata consists of a checksum/file manifest created by [Hashdeep](http://md5deep.sourceforge.net/start-hashdeep.html), an [ExifTool](https://www.sno.phy.queensu.ca/~phil/exiftool/) output in JSON, and a [MediaInfo](https://mediaarea.net/en/MediaInfo) output in JSON when A/V files are detected. Additionally, preservation actions such as metadata generation/verification and cloud migration are logged in a JSON file and mapped to [PREMIS vocabulary](http://id.loc.gov/vocabulary/preservation/eventType.html).
-
-### Core scripts:
-* [makemeta.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/makemeta.md)
-* [uploadaip.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/uploadaip.md)
-* [checkmeta.rb](https://github.com/WSU-CDSC/microservices/blob/master/Resources/checkmeta.md)
 
 ### Usage workflow:
 * Generate Metadata for collections using `makemeta.rb`
