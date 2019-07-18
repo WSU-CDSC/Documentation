@@ -22,10 +22,13 @@ The current workflow for migrating/storing digital materials into off-site cloud
 
 ## Workflow Dependencies
 
-The scripts used in the workflow control several tools that must be present/installed to function.
-* [Ruby](https://www.ruby-lang.org/en/documentation/installation/): As the scripts are written in Ruby, the computer must have Ruby installed. Additionally, the scripts rely on the installation of the `mail` gem for mail capability. This can be installed (if ruby is present) with `sudo gem install mail`.
-* [Bagit Java](https://github.com/WSU-CDSC/bagit-java): Currently the scripts use the Java command line tool, which in current form must be installed to path. Bagit Java has been forked to the CDSC Github account.
-* [B2 Command-Line Tool](https://www.backblaze.com/b2/docs/quick_command_line.html): This is the tool released by Backblaze to facilitate interactions with their cloud service.
+Installation of dependencies can be completed with the following commands:
+* `sudo apt-get install ruby-all-dev`
+* `sudo apt-get install mediainfo`
+* `sudo apt-get install hashdeep`
+* `sudo apt-get install exiftool`
+* `sudo pip install b2`
+* `sudo gem install mail` 
 
 The scripts rely on a central file containing methods etc, and will look for this script in their same directory, so make sure that the `wsu-functions.rb` file is always present along side of the scripts.
 
