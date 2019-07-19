@@ -38,7 +38,10 @@ Then the repository can be downloaded with the command:
 
 The scripts rely on a central file containing methods etc, and will look for this script in their same directory, so make sure that the `wsu-functions.rb` file is always present along side of the scripts.
 
-There is a conig file (`wsu-microservices.config`) that also must be present in the script directory. This file can be opened using a text editor, and is used to set options such as email reporting and logfile location.
+There is a conig file (`wsu-microservices.config`) that also must be present in the script directory. This file sets the following options:
+* Email address for metadata reports
+* File path for metada reports (if not set, will default to home directory)
+* Credentials for IBM Watson
 
 ## Workflow Steps and Scripts:
 
