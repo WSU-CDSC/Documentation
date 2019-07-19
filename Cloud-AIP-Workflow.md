@@ -23,12 +23,18 @@ The current workflow for migrating/storing digital materials into off-site cloud
 ## Workflow Dependencies
 
 Installation of dependencies can be completed with the following commands:
-* `sudo apt-get install ruby-all-dev`
-* `sudo apt-get install mediainfo`
-* `sudo apt-get install hashdeep`
-* `sudo apt-get install exiftool`
+* `sudo apt install ruby-all-dev`
+* `sudo apt install python`
+* `sudo apt install python-pip`
+* `sudo apt install mediainfo`
+* `sudo apt install hashdeep`
+* `sudo apt install exiftool`
 * `sudo pip install b2`
-* `sudo gem install mail` 
+* `sudo gem install mail`
+
+Then the repository can be downloaded with the command:
+
+`git clone https://github.com/WSU-CDSC/microservices`
 
 The scripts rely on a central file containing methods etc, and will look for this script in their same directory, so make sure that the `wsu-functions.rb` file is always present along side of the scripts.
 
