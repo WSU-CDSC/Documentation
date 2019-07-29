@@ -29,8 +29,11 @@ Installation of dependencies can be completed with the following commands:
 * `sudo apt install mediainfo`
 * `sudo apt install hashdeep`
 * `sudo apt install exiftool`
+* `sudo apt install sendmail`
 * `sudo pip install b2`
 * `sudo gem install mail`
+
+__NOTE:__ sendmail must be configured for email reporting to be functional.
 
 Then the repository can be downloaded with the command:
 
