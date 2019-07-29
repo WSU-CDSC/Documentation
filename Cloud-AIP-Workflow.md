@@ -61,17 +61,15 @@ These are the scripts that are used to generate/maintain/validate metadata acros
 ### Using Cyberduck
 The [Cyberduck app](https://cyberduck.io/) provides a relatively easy and intuitive way to interface with collections stored in B2. To configure an installation of Cyberduck, please talk to Libraries Systems. Once Cyberduck is installed, you will be able to log in and view/download items stored in B2. Files and directories can be downloaded by clicking on the 'Action' tab and then selecting 'Download.' Downloading via this method will keep original file properties such as creation time.
 
-__Note: ALL Packages downloaded for archival needs should have AIP Bag integrity validated. If files are downloaded separate from a bag, they should have their checksums generated and compared to the checksums housed in their bag.__
+__Note: ALL Packages downloaded for archival needs should have fixity integrity validated. As packages contain hashdeep manifests, [hashdeep](http://md5deep.sourceforge.net/start-hashdeep.html) can be used for this purpose, with the caveat that metadata files might show up as 'unexpected files.' If files are downloaded separate from a bag, they should have their checksums generated and compared to the checksums housed in their bag.__
 
 ### Other Methods
 
 #### Basic Access Needs
 For basic access to files stored in B2, the web interface provides convenient browsing/download capabilities (the caveat being that the browser has limitations on folder download sizes). For most patron requests, simply navigating to the file(s) or AIP in the browser and downloading should be sufficient. If a large folder needs to be downloaded, files can be downloaded in smaller chunks, or the command line method discussed below can be used.
 
-If a full AIP level package is downloaded, its integrity can be validated using one of the previously mentioned Bagit tools. If the Java CLI is used, the command is `bagit verifyvalid [INPUT BAG]` for a full checksum validation or `bagit checkpayloadoxum [INPUT BAG]` for a quick validation by payload size.
-
 #### Archival Access Needs
-When uploaded via `aip2b2.rb`, the b2 `sync` command is used which stores file metadata such as modification time is stored along side files. In the event of a download for Archival purposes (such as migration of data out of B2), it is important to use the reverse of this process to maintain this metadata. This can be done again using the `sync` command in reverse. It is suggested to do a 'dry run' download first to make sure you are using desired paths etc. An example command is:
+When uploaded via `aip2b2.rb`, the b2 `sync` command is used which stores file metadata such as modification time is stored along side files. In the event of a download via the CLI, (such as migration of data out of B2), it is important to use the reverse of this process to maintain this metadata. This can be done again using the `sync` command in reverse. It is suggested to do a 'dry run' download first to make sure you are using desired paths etc. An example command is:
 
 `b2 sync --dryRun 'b2://BUCKET-NAME/PATH-TO-TARGET' '/home/myuser/Desktop/TEST'`. To execute the download simply remove the `--dryRun` flag.
 
