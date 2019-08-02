@@ -61,7 +61,7 @@ These are the scripts that are used to generate/maintain/validate metadata acros
 ### Using Cyberduck
 The [Cyberduck app](https://cyberduck.io/) provides a relatively easy and intuitive way to interface with collections stored in B2. To configure an installation of Cyberduck, please talk to Libraries Systems. Once Cyberduck is installed, you will be able to log in and view/download items stored in B2. Files and directories can be downloaded by clicking on the 'Action' tab and then selecting 'Download.' Downloading via this method will keep original file properties such as creation time.
 
-__Note: ALL Packages downloaded for archival needs should have fixity integrity validated. As packages contain hashdeep manifests, [hashdeep](http://md5deep.sourceforge.net/start-hashdeep.html) can be used for this purpose, with the caveat that metadata files might show up as 'unexpected files.' If files are downloaded separate from a bag, they should have their checksums generated and compared to the checksums housed in their bag.__
+__Note: ALL Packages downloaded for archival needs should have fixity integrity validated. As packages contain hashdeep manifests, [hashdeep](http://md5deep.sourceforge.net/start-hashdeep.html) can be used for this purpose, with the caveat that metadata files might show up as 'unexpected files.' If files are downloaded separate from an AIP, they should have their checksums generated and compared to the checksums housed in their AIP.__
 
 ### Other Methods
 
